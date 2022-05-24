@@ -1,11 +1,31 @@
-:root {
-  --primary-font-family: 'Open Sans', sans-serif;
-  --secondary-font-family: 'Raleway', sans-serif;
-  --primary-text-color-theme-dark: 157, 164, 189;
-  --secondary-text-color-theme-dark: #ffffff;
-  --primary-text-color-theme-light: #555555;
-  --secondary-text-color-theme-light: #303030;
-  --accent-color: #ff6c00;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+img {
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
 }
 
 .list {
@@ -16,213 +36,51 @@
   text-decoration: none;
 }
 
-body {
-  font-family: var(--primary-font-family);
-}
-
-/* ============= COMPONENTS ============= */
-.modal-btn {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  cursor: pointer;
-  /* color: #ffffff; */
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: var(--accent-color);
-  color: #ffffff;
-}
-
-.social-links-list-link {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: #303030;
-}
-
-.social-links-list-link:hover,
-.social-links-list-link:focus {
-  color: var(--accent-color);
-}
-
-.suptitle {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.suptitle-theme-light {
-  color: var(--secondary-text-color-theme-light);
-}
-
-.suptitle-theme-dark {
-  color: rgba(var(primary-text-color-theme-dark), 0.6);
-}
-
-.section-description {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-}
-
-.section-description-theme-dark {
-  color: rgb(var(--primary-text-color-theme-dark));
-}
-
-.section-description-theme-light {
-  color: var(--primary-text-color-theme-light);
-}
-
 .title {
-  font-family: var(--secondary-font-family);
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.67;
-  letter-spacing: 0.05em;
+  border: 1px solid teal;
+  margin-bottom: 20px;
 }
 
-.title-theme-dark {
-  color: var(--secondary-text-color-theme-dark);
+.text {
+  width: 200px;
+  height: 200px;
+  border: 10px solid tomato;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-.title-theme-light {
-  color: var(--secondary-text-color-theme-light);
-}
-/* ============= /COMPONENTS ============= */
+/* 
+an + b 
+a - произвольное число
+n - число которое начинается с 0 и увеличивается на 1
+b - произвольное число
+*/
 
-/* ============= HEADER ============= */
-.menu-link {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  /* color: #ffffff; */
-}
+/* 
+2n + 1 - odd
 
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--accent-color);
-}
+2 * 0 + 1 = 1;
+2 * 1 + 1 = 3;
+*/
 
-.phone-number {
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.1em;
-  /* color: #ffffff; */
-}
+/* 
+2n - even
 
-.phone-number:hover,
-.phone-number:focus {
-  color: var(--accent-color);
-}
-/* ============= /HEADER ============= */
+2 * 1 = 2;
+2 * 2 = 4;
+*/
 
-/* ============= HERO ============= */
-.hero-title {
-  font-family: var(--secondary-font-family);
-  font-weight: 700;
-  font-size: 72px;
-  line-height: 1.18;
-  letter-spacing: 0.05em;
-  /* color: #ffffff; */
-}
-/* ============= /HERO ============= */
+/* .list-item:not(:last-child) {
+  margin-bottom: 20px;
+} */
 
-/* =============== ABOUT =============== */
-.about-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.86;
-  letter-spacing: 0.02em;
-  color: var(--primary-text-color-theme-light);
-}
-/* =============== /ABOUT =============== */
+/* 
+-n + 2
 
-/* =============== SERVICES =============== */
-.services-table-name,
-.services-table-price {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: rgb(var(--primary-text-color-theme-dark));
-}
-/* =============== /SERVICES =============== */
+-0 + 2 = 2;
+-1 + 2 = 1;
+*/
 
-/* =============== ADVANTAGES =============== */
-.advantages-list-quantity {
-  font-weight: 700;
-  font-size: 42px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: var(--secondary-text-color-theme-light);
-}
-
-.advantages-list-description {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  text-align: center;
-  color: var(--secondary-text-color-theme-light);
-}
-/* =============== /ADVANTAGES =============== */
-
-/* =============== EMPLOYEES =============== */
-.employees-name {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.39;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color-theme-light);
-}
-
-.employees-position {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.36;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--accent-color);
-}
-/* =============== /EMPLOYEES =============== */
-
-/* =============== GALLERY =============== */
-/* =============== /GALLERY =============== */
-
-/* =============== CONTACT INFO =============== */
-.contact-list-link {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: rgb(var(--primary-text-color-theme-dark));
-}
-.contact-info-date {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.67;
-  letter-spacing: 0.02em;
-  color: rgb(var(--primary-text-color-theme-dark));
-}
-/* =============== /CONTACT INFO =============== */
-
-/* =============== FOOTER =============== */
-.copyright {
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.2em;
-  color: rgb(var(--primary-text-color-theme-dark));
-}
-/* =============== /FOOTER =============== */
+/* .list-item:not(:nth-last-child(-n + 2)) {
+  margin-bottom: 30px;
+} */
