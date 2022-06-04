@@ -83,6 +83,15 @@ body {
   align-items: center;
 }
 
+.social-links-list::before {
+  content: '';
+  width: 60px;
+  height: 1px;
+  background-color: #303030;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
 .social-links-list-item:not(:last-child) {
   margin-right: 40px;
 }
@@ -310,16 +319,36 @@ body {
   flex-basis: 50%;
   padding: 30px 40px;
   margin-bottom: 50px;
-  border: 1px solid #cccccc;
 }
 
-.services-table-item {
+.services-table:first-child {
+  background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.services-table:last-child {
+  background-image: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
+.services-table-row {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
-.services-table-item:not(:last-child) {
+.services-table-row:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.services-table-row::before {
+  content: '';
+  flex-grow: 1;
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  margin: 0 6px;
+}
+
+.services-table-name {
+  order: -1;
 }
 
 .services-table-name,
@@ -369,12 +398,27 @@ body {
 }
 
 .advantages-list-quantity {
+  position: relative;
+  width: min-content;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.05em;
   color: var(--secondary-text-color-theme-light);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.advantages-list-quantity::before {
+  position: absolute;
+  top: 7px;
+  right: -10px;
+  content: '+';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.38;
+  color: var(--accent-color);
 }
 
 .advantages-list-description {
@@ -500,14 +544,81 @@ body {
 }
 /* =============== /GALLERY =============== */
 
+/* =============== CONTACT BLOCK =============== */
+.contact-block-wrapper {
+  background-color: #191c26;
+  background-image: url('../images/contact-info/bg.png');
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 50% auto;
+}
+
+.contact-block-wrapper-container {
+  display: flex;
+}
+/* =============== /CONTACT BLOCK =============== */
+
+/* =============== CONTACT FORM =============== */
+.contact-form-section {
+  flex-basis: 50%;
+}
+/* =============== /CONTACT FORM =============== */
+
 /* =============== CONTACT INFO =============== */
+.contact-info-section {
+  flex-basis: 50%;
+  padding-left: 100px;
+}
+
+.contact-info-section-suptitle {
+  color: #ffffff;
+}
+
+.contact-info-section-suptitle::before {
+  background-color: #ffffff;
+}
+
+.contact-info-section-address {
+  max-width: 260px;
+  font-style: normal;
+  margin-bottom: 66px;
+}
+
+.contact-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
 .contact-list-link {
+  display: flex;
+  align-items: center;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: rgb(var(--primary-text-color-theme-dark));
 }
+
+.contact-list-link:hover,
+.contact-list-link:focus {
+  color: var(--accent-color);
+}
+
+.contact-list-link-icon {
+  flex-shrink: 0;
+  margin-right: 16px;
+  stroke: #9da4bd;
+}
+
+.contact-list-link:hover .contact-list-link-icon,
+.contact-list-link:focus .contact-list-link-icon {
+  stroke: var(--accent-color);
+}
+
+.contact-list-link-icon-map-pin {
+  align-self: flex-start;
+  margin-top: 8px;
+}
+
 .contact-info-date {
   font-weight: 400;
   font-size: 18px;
