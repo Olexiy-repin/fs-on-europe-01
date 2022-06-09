@@ -65,17 +65,17 @@ body {
   border-radius: 25px;
   background-color: transparent;
   padding: 12px 20px;
-  /* color: #ffffff; */
+  transition: background-color 250ms linear, color 250ms linear;
 }
 
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--accent-color);
-  color: #ffffff;
+  color: var(--secondary-text-color-theme-dark);
 }
 
 .modal-btn-theme-dark {
-  color: #ffffff;
+  color: var(--secondary-text-color-theme-dark);
 }
 
 .social-links-list {
@@ -180,6 +180,10 @@ body {
 
 /* ============= HEADER ============= */
 .page-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -211,7 +215,8 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.1em;
-  /* color: #ffffff; */
+  color: var(--secondary-text-color-theme-dark);
+  transition: color 250ms linear;
 }
 
 .menu-link:hover,
@@ -226,7 +231,8 @@ body {
   letter-spacing: 0.1em;
   margin-left: auto;
   margin-right: 40px;
-  /* color: #ffffff; */
+  color: var(--secondary-text-color-theme-dark);
+  transition: color 250ms linear;
 }
 
 .phone-number:hover,
