@@ -63,27 +63,25 @@
 }
 
 .social-list-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %align;
   width: 44px;
   height: 44px;
   border-radius: 50%;
   background-color: #ffffff;
   transition: background-color 250ms linear;
-}
 
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: #303030;
+  &:hover,
+  &:focus {
+    background-color: #303030;
+  }
 }
 
 .social-list-icon {
   fill: #303030;
   transition: fill 250ms linear;
-}
 
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--accent-color);
+  .social-list-link:hover &,
+  .social-list-link:focus & {
+    fill: var(--accent-color);
+  }
 }
