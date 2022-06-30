@@ -36,7 +36,7 @@ body {
   min-height: 600px;
   background-image: url('../images/car.jpg');
   background-position: center;
-  background-size: cover;
+  background-size: 960px 576px;
   background-repeat: no-repeat;
 }
 
@@ -47,6 +47,12 @@ body {
   192dpi - 2x
   288dpi - 3x
 */
+
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .banner {
+    background-image: url('../images/car@2x.jpg');
+  }
+}
 
 .team-list {
   display: flex;
